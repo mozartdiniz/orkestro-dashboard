@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TestStyle from './App.style';
-import Map from './Map';
+import Map from './components/map/Map';
 
 const App: React.FC = () => {
   return (
