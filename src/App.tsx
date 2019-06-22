@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TestStyle from './App.style';
+import Map from './Map';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
           rel="noopener noreferrer">
           Learn React
         </a>
+        <Map />
       </header>
     </TestStyle>
   );
