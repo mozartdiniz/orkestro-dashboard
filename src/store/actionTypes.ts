@@ -1,0 +1,8 @@
+// Drivers
+export const SAVE_DRIVERS = 'SAVE_DRIVERS';
+export const SELECT_DRIVERS_CLOSE_TO_ORDER = 'SELECT_DRIVERS_CLOSE_TO_ORDER';
+
+// Orders
+export const FETCH_ORDERS = 'FETCH_ORDERS';
+export const SELECT_ORDER = 'SELECT_ORDER';
+export const FILTER_ORDERS = 'FILTER_ORDERS';
