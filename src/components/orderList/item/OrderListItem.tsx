@@ -12,10 +12,19 @@ const formatDate = (pickupTime: string): string =>
 
 export interface IOrderListItemProps {
   order: IOrder;
+  isSelected: boolean;
+  onClickItem: (orderId: string) => void;
 }
 
-export const OrderListItem: React.FC<IOrderListItemProps> = ({ order }) => (
-  <OrderListItemStyled data-qa="order-item">
+export const OrderListItem: React.FC<IOrderListItemProps> = ({
+  order,
+  isSelected,
+  onClickItem
+}) => (
+  <OrderListItemStyled
+    data-qa="order-item"
+    isSelected={isSelected}
+    onClick={() => onClickItem(order.id)}>
     <span>{formatDate(order.pickupTime)}</span>
     <AddressStyled>{order.pickupAddress}</AddressStyled>
     <DimensionsStyled>
