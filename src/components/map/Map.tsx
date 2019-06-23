@@ -28,7 +28,7 @@ export const focusMapOnSelectedOrder = (
 ): IFocusMapOnSelectedOrder =>
   order
     ? {
-        zoom: [16],
+        zoom: [15],
         center: [order.location.long, order.location.lat]
       }
     : {
