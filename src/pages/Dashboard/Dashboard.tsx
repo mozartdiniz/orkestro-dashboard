@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { IAppState } from '../../store/interfaces';
 import { fetchDrivers } from '../../store/drivers/actions';
 import { fetchOrders } from '../../store/orders/actions';
@@ -28,7 +29,7 @@ export const Dashboard: React.FC = () => {
   return (
     <DashboardStyle>
       <OrderList orders={orders} />
-      <Map />
+      <Map driversPositions={driversPositions} />
     </DashboardStyle>
   );
 };
