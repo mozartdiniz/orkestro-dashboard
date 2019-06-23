@@ -1,3 +1,3 @@
-import { OrderList } from './OrderList';
+import { OrderList } from './list/OrderList';
 
 export default OrderList;

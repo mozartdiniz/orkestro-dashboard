@@ -24,8 +24,6 @@ export const Dashboard: React.FC = () => {
     dispatch(fetchOrders());
   }, [dispatch]);
 
-  console.log(driversPositions);
-
   return (
     <DashboardStyle>
       <OrderList orders={orders} />
