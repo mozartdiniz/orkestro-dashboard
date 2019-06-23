@@ -8,7 +8,7 @@ export interface IDriverState {
 export interface IDriver {
   id: string;
   name: string;
-  inRoute: false;
+  inRoute: boolean;
 }
 
 export interface IDriverPosition extends IDriver {

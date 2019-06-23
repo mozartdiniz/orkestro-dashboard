@@ -1,4 +1,4 @@
-import { IOrder } from "./interfaces";
+import { IOrder } from './interfaces';
 
 export const mockTwoOrders: IOrder[] = [{
   id: 'dbed2ab5-c5ce-47fc-b2c3-b80e0d5e0fd7',
@@ -8,6 +8,10 @@ export const mockTwoOrders: IOrder[] = [{
     lat: 51.5032532,
     long: -0.1527521
   },
+  closestDrivers: [
+    '7c3510e3-8db7-4508-8329-f2439caebc6b',
+    '54550703-ac5b-42a6-a6c5-2cfeecee2ba4'
+  ],
   dimension: {
     description: 'large pizza box',
     width: 24,
