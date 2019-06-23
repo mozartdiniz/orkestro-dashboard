@@ -1,4 +1,5 @@
 import * as actionTypes from '../actionTypes';
+import { ILocation } from '../interfaces';
 
 export interface IDimension {
   description: string
@@ -12,6 +13,8 @@ export interface IOrder {
   pickupTime: string
   pickupAddress: string
   dimension: IDimension
+  location: ILocation
+  closestDrivers?: string[]
 }
 
 export interface ISaveOrderAction {

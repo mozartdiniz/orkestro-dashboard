@@ -19,11 +19,13 @@ export interface IDriversLayerProps {
 export const DriversLayer: React.FC<IDriversLayerProps> = ({
   driversPositions
 }) => (
-  <Layer type="symbol" id="marker" layout={layoutLayer} images={images}>
+  <Layer type="symbol" id="driver" layout={layoutLayer} images={images}>
     {driversPositions.map(driver => (
       <Feature
         key={driver.id}
-        onClick={feature => console.log(feature)}
+        onClick={feature => {
+          console.log(driver.id);
+        }}
         coordinates={[driver.location.long, driver.location.lat]}
       />
     ))}

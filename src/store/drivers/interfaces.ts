@@ -1,12 +1,8 @@
 import * as actionTypes from '../actionTypes';
+import { ILocation } from '../interfaces';
 
 export interface IDriverState {
   driversPositions: IDriverPosition[]
-}
-
-export interface ILocation {
-  lat: number;
-  long: number;
 }
 
 export interface IDriver {
