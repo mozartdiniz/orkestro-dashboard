@@ -5,11 +5,6 @@ import thunk from 'redux-thunk';
 import drivers from './drivers/reducers';
 import orders from './orders/reducers';
 
-console.log({
-  drivers,
-  orders
-});
-
 const rootReducer = combineReducers({
   drivers,
   orders
