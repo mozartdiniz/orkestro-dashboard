@@ -1,10 +1,10 @@
 import { saveDrivers } from './actions';
-import { IDriver } from './interfaces';
-import { SAVE_DRIVERS } from '../actionTypes';
+import { IDriverPosition } from './interfaces';
+import { SAVE_DRIVERS_POSITIONS } from '../actionTypes';
 
 describe('Driver interface actions', () => {
-  it('should dispatch SAVE_DRIVERS action', () => {
-    const drivers: IDriver[] = [{
+  it('should dispatch SAVE_DRIVERS_POSITIONS action', () => {
+    const driversPositions: IDriverPosition[] = [{
       id: 'cc33f00c-d666-4cee-a9cb-8d591a154367',
       name: 'John Doe',
       inRoute: false,
@@ -15,11 +15,11 @@ describe('Driver interface actions', () => {
     }];
 
     const expectedAction = {
-      type: SAVE_DRIVERS,
-      drivers
+      type: SAVE_DRIVERS_POSITIONS,
+      driversPositions
     }
 
-    expect(saveDrivers(drivers)).toEqual(expectedAction)
+    expect(saveDrivers(driversPositions)).toEqual(expectedAction)
   });
 
 });

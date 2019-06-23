@@ -3,15 +3,20 @@ import { useSelector, useDispatch } from 'react-redux';
 import TestStyle from './App.style';
 import Map from './components/map/Map';
 import { IAppState } from './store/interfaces';
-import { fetchDriver } from './store/drivers/actions';
+import { fetchDrivers } from './store/drivers/actions';
+import { fetchOrders } from './store/orders/actions';
 
 const App: React.FC = () => {
   const drivers = useSelector((state: IAppState) => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchDriver());
-  }, []);
+    dispatch(fetchDrivers());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(fetchOrders());
+  }, [dispatch]);
 
   console.log(drivers);
   return (

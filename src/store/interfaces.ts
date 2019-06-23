@@ -1,13 +1,17 @@
 import {
-  IDriver,
   ISaveDriversAction,
-  ISelectDriversCloseToOrderAction
+  ISelectDriversCloseToOrderAction,
+  IDriverState
 } from './drivers/interfaces';
+import { ISaveOrderAction, ISelectOrderAction, IOrder } from './orders/interfaces';
 
 export type AppAction =
   | ISaveDriversAction
-  | ISelectDriversCloseToOrderAction;
+  | ISelectDriversCloseToOrderAction
+  | ISaveOrderAction
+  | ISelectOrderAction
 
 export interface IAppState {
-  drivers: IDriver[];
+  drivers: IDriverState;
+  orders: IOrder[];
 }

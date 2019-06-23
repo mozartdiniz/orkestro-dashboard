@@ -1,14 +1,12 @@
 import { reducer } from './reducers';
 import { saveDrivers } from './actions';
-import { SAVE_DRIVERS } from '../actionTypes';
-import { IAppState } from '../interfaces';
-import { IDriver } from './interfaces';
+import { IDriverPosition, IDriverState } from './interfaces';
 
-const state: IAppState = {
-  drivers: []
+const initialState: IDriverState = {
+  driversPositions: []
 }
 
-const drivers: IDriver[] = [{
+const driversPositions: IDriverPosition[] = [{
   id: 'cc33f00c-d666-4cee-a9cb-8d591a154367',
   name: 'John Doe',
   inRoute: false,
@@ -20,12 +18,12 @@ const drivers: IDriver[] = [{
 
 describe('reducers', () => {
   it('save drivers to store', () => {
-    const action = saveDrivers(drivers);
-    const newState = reducer(state, action);
+    const action = saveDrivers(driversPositions);
+    const newState = reducer(initialState, action);
 
     expect(newState).toEqual({
-      ...state,
-      drivers,
+      ...initialState,
+      driversPositions,
     });
   });
 

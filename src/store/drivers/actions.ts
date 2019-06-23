@@ -3,17 +3,17 @@ import { Dispatch } from 'redux';
 import * as actionTypes from '../actionTypes';
 import { driverAPI } from '../../consts/index';
 import {
-  IDriver,
   ISaveDriversAction,
+  IDriverPosition,
 } from './interfaces';
 
-export const saveDrivers = (drivers: IDriver[]): ISaveDriversAction => ({
-  type: actionTypes.SAVE_DRIVERS,
-  drivers
+export const saveDrivers = (driversPositions: IDriverPosition[]): ISaveDriversAction => ({
+  type: actionTypes.SAVE_DRIVERS_POSITIONS,
+  driversPositions
 });
 
-export const fetchDriver = () => (dispatch: Dispatch<ISaveDriversAction>) => {
+export const fetchDrivers = () => (dispatch: Dispatch<ISaveDriversAction>) => {
   fetch(`${process.env.REACT_APP_API}/${driverAPI}`)
     .then(result => result.json())
-    .then((json: IDriver[]) => dispatch(saveDrivers(json)));
+    .then((json: IDriverPosition[]) => dispatch(saveDrivers(json)));
 };

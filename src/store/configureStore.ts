@@ -3,9 +3,16 @@ import thunk from 'redux-thunk';
 
 // Reducers
 import drivers from './drivers/reducers';
+import orders from './orders/reducers';
+
+console.log({
+  drivers,
+  orders
+});
 
 const rootReducer = combineReducers({
-  drivers
+  drivers,
+  orders
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));

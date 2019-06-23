@@ -1,16 +1,18 @@
 import * as actionTypes from '../actionTypes';
-import { ISaveDriversAction } from './interfaces';
-import { AppAction, IAppState } from '../interfaces';
-import { initialState } from '../state';
+import { ISaveDriversAction, IDriverState } from './interfaces';
+import { AppAction } from '../interfaces';
 
-export const saveDrivers = (state: IAppState, action: ISaveDriversAction) => ({
-  ...state,
-  drivers: action.drivers
+const initialState: IDriverState = {
+  driversPositions: []
+}
+
+export const saveDrivers = (state: IDriverState, action: ISaveDriversAction) => ({
+  driversPositions: action.driversPositions
 });
 
 export const reducer = (state = initialState, action: AppAction) => {
   switch (action.type) {
-    case actionTypes.SAVE_DRIVERS:
+    case actionTypes.SAVE_DRIVERS_POSITIONS:
       return saveDrivers(state, action);
     default:
       return state;
