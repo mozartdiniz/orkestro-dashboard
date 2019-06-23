@@ -23,14 +23,11 @@ export const Dashboard: React.FC = () => {
   const selectedOrder = useSelector(selectedOrderSelector);
   const driversPositions = useSelector(selectDriversSelector);
   const closestDrivers = useSelector(selectClosestDriversSelector);
-  console.log(closestDrivers);
+
   const dispatch = useDispatch();
 
   const onClickOrdemListItem = (orderId: string) =>
     dispatch(selectOrder(orderId));
-
-  console.log(selectedOrder);
-  console.log(closestDrivers);
 
   useEffect(() => {
     dispatch(fetchDrivers());

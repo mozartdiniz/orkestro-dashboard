@@ -23,9 +23,6 @@ export const DriversLayer: React.FC<IDriversLayerProps> = ({
     {driversPositions.map(driver => (
       <Feature
         key={driver.id}
-        onClick={feature => {
-          console.log(driver.id);
-        }}
         coordinates={[driver.location.long, driver.location.lat]}
       />
     ))}

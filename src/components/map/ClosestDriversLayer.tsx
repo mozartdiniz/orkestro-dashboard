@@ -28,9 +28,6 @@ export const ClosestDriversLayer: React.FC<IClosestDriversLayerProps> = ({
       driversPositions.map(driver => (
         <Feature
           key={driver.id}
-          onClick={() => {
-            console.log(driver.id);
-          }}
           coordinates={[driver.location.long, driver.location.lat]}
         />
       ))}

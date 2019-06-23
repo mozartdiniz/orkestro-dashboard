@@ -42,7 +42,7 @@ const Map: React.FC<IMapProps> = ({
   closestDrivers
 }) => {
   const { zoom, center } = focusMapOnSelectedOrder(selectedOrder);
-  console.log(closestDrivers);
+
   return (
     <MapWrapper>
       <Mapbox
@@ -50,9 +50,6 @@ const Map: React.FC<IMapProps> = ({
         style="mapbox://styles/mapbox/streets-v9"
         zoom={zoom}
         center={center}
-        onClick={(m: any, e: any) =>
-          console.log(JSON.stringify([e.lngLat.lng, e.lngLat.lat]))
-        }
         containerStyle={{
           height: '100%',
           width: '100%'
