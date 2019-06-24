@@ -6,8 +6,8 @@ import { OrderListItem } from '../item/OrderListItem';
 
 export interface IOrderListProps {
   orders: IOrder[];
-  selectedOrderId: string;
-  onClickItem: (orderId: string) => void;
+  selectedOrderId?: string;
+  onClickItem?: (orderId: string) => void;
 }
 
 export const OrderList: React.FC<IOrderListProps> = ({

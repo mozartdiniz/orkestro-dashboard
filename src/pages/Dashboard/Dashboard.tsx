@@ -26,7 +26,7 @@ export const Dashboard: React.FC = () => {
 
   const dispatch = useDispatch();
 
-  const onClickOrdemListItem = (orderId: string) =>
+  const onClickOrderListItem = (orderId: string) =>
     dispatch(selectOrder(orderId));
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export const Dashboard: React.FC = () => {
       <OrderList
         orders={orders}
         selectedOrderId={selectedOrderId}
-        onClickItem={onClickOrdemListItem}
+        onClickItem={onClickOrderListItem}
       />
       <Map
         driversPositions={driversPositions}

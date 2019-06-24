@@ -1,6 +1,5 @@
 import { reducer, IOrderState } from './reducers';
 import { saveOrders, selectOrder } from './actions';
-import { IOrder } from './interfaces';
 import { mockTwoOrders } from './mocks';
 
 const selectedOrderId = mockTwoOrders[0].id;

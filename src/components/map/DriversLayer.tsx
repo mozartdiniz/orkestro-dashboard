@@ -20,11 +20,8 @@ export const DriversLayer: React.FC<IDriversLayerProps> = ({
   driversPositions
 }) => (
   <Layer type="symbol" id="driver" layout={layoutLayer} images={images}>
-    {driversPositions.map(driver => (
-      <Feature
-        key={driver.id}
-        coordinates={[driver.location.long, driver.location.lat]}
-      />
+    {driversPositions.map(({ id, location: { long, lat } }) => (
+      <Feature key={id} coordinates={[long, lat]} />
     ))}
   </Layer>
 );
